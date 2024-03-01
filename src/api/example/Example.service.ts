@@ -17,7 +17,7 @@ export class ExampleService {
 	}
 
     hello() {
-        this.logger.debug(`${nameof<ExampleService>("hello")} is called from request`);
+        this.logger.debug(`${nameof<ExampleService>("hello")} is called`);
 
         return {
             data: "Hello World!",
