@@ -1,9 +1,8 @@
 import { Get, JsonController } from "routing-controllers";
 import { inject, delay, injectable } from "tsyringe";
-import winston from "winston";
-import { AppConfig } from "../../common/appconfig/AppConfig";
-import { LoggerFactory } from "../../common/logger/LoggerFactory";
-import { nameof } from "../../common/nameof";
+import { AppConfig } from "@/common/appconfig/AppConfig";
+import { LoggerFactory } from "@/common/logger/LoggerFactory";
+import { nameof } from "@/common/nameof";
 import { ExampleService } from "./Example.service";
 
 @JsonController("/example")

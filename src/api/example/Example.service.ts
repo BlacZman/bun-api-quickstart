@@ -1,7 +1,7 @@
 import { delay, inject, injectable } from "tsyringe";
-import { LoggerFactory } from "../../common/logger/LoggerFactory";
-import winston from "winston";
-import { AppConfig } from "../../common/appconfig/AppConfig";
+import { LoggerFactory } from "@/common/logger/LoggerFactory";
+import { AppConfig } from "@/common/appconfig/AppConfig";
+import { nameof } from "@/common/nameof";
 
 @injectable()
 export class ExampleService {
@@ -17,6 +17,8 @@ export class ExampleService {
 	}
 
     hello() {
+        this.logger.debug(`${nameof<ExampleService>("hello")} is called from request`);
+
         return {
             data: "Hello World!",
         };
