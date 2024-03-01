@@ -1,0 +1,1 @@
+export type NodeEnv = "development" | "sit" | "uat" | "production";

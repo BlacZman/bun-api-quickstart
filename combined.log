@@ -1,0 +1,2 @@
+{"level":"info","message":"Server is running on port 8081","service":"Server","timestamp":"2024-03-01T17:17:44.126Z"}
+{"level":"debug","message":"getHello is called from request","service":"ExampleController","timestamp":"2024-03-01T17:17:47.227Z"}
