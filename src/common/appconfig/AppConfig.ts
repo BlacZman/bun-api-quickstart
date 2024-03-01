@@ -1,4 +1,4 @@
-import { delay, inject, injectable } from "tsyringe";
+import { injectable } from "tsyringe";
 import type { LogLevel } from "@/common/logger/LogLevel";
 import type { NodeEnv } from "@/common/appconfig/NodeEnvType";
 

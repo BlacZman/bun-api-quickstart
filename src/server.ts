@@ -2,7 +2,6 @@ import express from 'express';
 import { useExpressServer, type RoutingControllersOptions } from 'routing-controllers';
 import path from 'path';
 import { delay, inject, injectable } from 'tsyringe';
-import winston from 'winston';
 
 import { AppConfig } from '@/common/appconfig/AppConfig';
 import { LoggerFactory } from '@/common/logger/LoggerFactory';
@@ -21,7 +20,7 @@ export class Server {
 		this.logger = loggerFactory.createFactory(this.name);
 	}
 
-	async initializeAndStart() {
+	initializeAndStart() {
 		// Create Express Server
 		const server = express();
 
