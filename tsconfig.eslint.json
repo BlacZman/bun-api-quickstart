@@ -1,4 +1,4 @@
 {
 	"extends": "./tsconfig.json",
-	"include": ["src/**/*.ts", ".eslintrc.json"]
+	"include": ["src/**/*.ts", ".eslintrc.json", "drizzle.config.ts", "migration.ts"]
 }

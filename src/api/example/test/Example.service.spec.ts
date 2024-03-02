@@ -1,6 +1,6 @@
 import { expect, test, describe } from "bun:test";
 import { container } from "tsyringe";
-import { ExampleService } from "../Example.service";
+import { ExampleService } from "../../../service/Example.service";
 
 describe("ExampleService", () => {
     const exampleService = container.resolve(ExampleService);

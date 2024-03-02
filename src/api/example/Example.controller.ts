@@ -3,7 +3,7 @@ import { inject, delay, injectable } from "tsyringe";
 import { AppConfig } from "@/common/appconfig/AppConfig";
 import { LoggerFactory } from "@/common/logger/LoggerFactory";
 import { nameof } from "@/common/nameof";
-import { ExampleService } from "./Example.service";
+import { ExampleService } from "../../service/Example.service";
 
 @JsonController("/example")
 @injectable()
