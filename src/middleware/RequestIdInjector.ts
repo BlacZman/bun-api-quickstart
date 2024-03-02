@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { inject, delay, injectable } from "tsyringe";
 import * as express from "express";
 import { v4 as uuidv4 } from "uuid";
@@ -32,7 +33,13 @@ export class RequestIdInjector implements ExpressMiddlewareInterface {
 		const uuid = uuidv4();
 		response.locals.requestId = uuid;
 
-		this.logger.info(`Incoming request`, { requestId: uuid, path: request.url, payload: request.body as unknown, header: request.headers, query: request.query });
-		next();
+		this.logger.info(`Incoming request`, {
+            requestId: uuid,
+            method: request.method,
+            url: request.url,
+            header: request.headers,
+            query: request.query,
+        });
+        next();
 	}
 }
